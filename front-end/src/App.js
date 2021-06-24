@@ -1,32 +1,26 @@
-import Home from "./pages/home/Home";
-import TopBar from "./components/topbar/TopBar";
-import Single from "./pages/single/Single";
-import Write from "./pages/write/Write";
-import Settings from "./pages/settings/Settings";
-import Login from "./pages/login/Login";
-import Register from "./pages/register/Register";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { useContext } from "react";
-import { Context } from "./context/Context";
 
-function App() {
-  const { user } = useContext(Context);
+// import './App.css';
+// import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
+// Import layout
+import Header from "./shared/components/layouts/Header";
+// import Menu from "./shared/components/layout/Menu";
+// import Slider from "./shared/components/layout/Slider";
+// import Sidebar from "./shared/components/layout/Sidebar";
+import Footer from "./shared/components/layouts/Footer";
+// Import pages
+// import Home from "./pages/Home";
+// import Category from "./pages/Category";
+// import ProductDetail from "./pages/ProductDetail";
+// import Cart from "./pages/Cart";
+// import Search from "./pages/Search";
+// import Success from "./pages/Success";
+// import NotFound from "./pages/NotFound";
+ function App() {
   return (
-    <Router>
-      <TopBar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/register">{user ? <Home /> : <Register />}</Route>
-        <Route path="/login">{user ? <Home /> : <Login />}</Route>
-        <Route path="/write">{user ? <Write /> : <Register />}</Route>
-        <Route path="/settings">{user ? <Settings /> : <Register />}</Route>
-        <Route path="/post/:postId">
-          <Single />
-        </Route>
-      </Switch>
-    </Router>
+    <div className="App">
+          <Header />
+          <Footer />
+    </div>
   );
 }
 
