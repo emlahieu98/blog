@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom"
 const Header = () => {
     return (
         <header>
@@ -7,9 +7,9 @@ const Header = () => {
                 <header className="topbar" data-navbarbg="skin1">
                     <div className="row align-items-center">
                         <div className="col-12 col-lg-6 d-flex">
-                            <a href="index.html" className="site-logo">
+                            <Link to="/" className="site-logo">
                                 FUNNY CODE
-                            </a>
+                            </Link>
                             <a
                                 href="#"
                                 className="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"
@@ -47,80 +47,6 @@ const Header = () => {
                     </div>
                 </header>
             </div>
-            <nav>
-                <div className="container">
-                    <ul className="nav align-items-center d-flex justify-content-center">
-                        <li className="nav-item">
-                            {" "}
-                            <a
-                                href="javascript:void(0)"
-                                className="nav-link note-link d-flex align-items-center active px-2 px-md-3 mr-0 mr-md-2"
-                                id="all-category"
-                            >
-                                <span className="d-none d-md-block">HOME</span>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            {" "}
-                            <a
-                                href="javascript:void(0)"
-                                className="nav-link note-link d-flex align-items-center px-2 px-md-3 mr-0 mr-md-2"
-                                id="note-business"
-                            >
-                                <span className="d-none d-md-block">CODE</span>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            {" "}
-                            <a
-                                href="javascript:void(0)"
-                                className="nav-link note-link d-flex align-items-center px-2 px-md-3 mr-0 mr-md-2"
-                                id="note-social"
-                            >
-                                <span className="d-none d-md-block">LIFE</span>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            {" "}
-                            <a
-                                href="javascript:void(0)"
-                                className="nav-link note-link d-flex align-items-center px-2 px-md-3 mr-0 mr-md-2"
-                                id="note-important"
-                            >
-                                <span className="d-none d-md-block">ABOUT</span>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            {" "}
-                            <a
-                                href="javascript:void(0)"
-                                className="nav-link note-link d-flex align-items-center px-2 px-md-3 mr-0 mr-md-2"
-                                id="add-notes"
-                            >
-                                <span className="d-none d-md-block">
-                                    CONTACT
-                                </span>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            {" "}
-                            <a
-                                href="javascript:void(0)"
-                                className="nav-link note-link d-flex align-items-center px-2 px-md-3 mr-0 mr-md-2"
-                                id="add-notes"
-                            >
-                                <span
-                                    className="d-none d-md-block"
-                                    data-toggle="modal"
-                                    data-target="#login-modal"
-                                >
-                                    LOGIN
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
         </header>
     );
 };
